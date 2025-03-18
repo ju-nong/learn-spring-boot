@@ -1,10 +1,10 @@
 package com.learn_spring_boot.quickstart.controller;
 
+import com.learn_spring_boot.quickstart.dto.ItemDto;
+import com.learn_spring_boot.quickstart.dto.ResponseDto;
+import io.swagger.v3.oas.annotations.Operation;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @Slf4j
@@ -34,5 +34,16 @@ public class QuickController {
         log.info("id: {}", id);
 
         return "ok";
+    }
+
+    @PostMapping("/item")
+    @Operation(summary = "API 요약", description = "API 설명")
+    public ResponseDto registerItem(@RequestBody ItemDto item) {
+        log.info("item {}", item);
+
+        ResponseDto responseDto = new ResponseDto();
+        responseDto.setMessage("ok");
+
+        return responseDto;
     }
 }
