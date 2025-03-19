@@ -57,4 +57,9 @@ public class QuickController {
 
         return responseDto;
     }
+
+    @GetMapping("/item")    // /company/2234
+    public ItemDto getItem(@RequestParam("id") String id) {
+        return quickService.getItemById(id);
+    }
 }
