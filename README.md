@@ -5,6 +5,7 @@
 
 강의 커리큘럼은 이렇다.
  - Spring Boot (Maven)
+ - Rest API
  - Swagger
  - MyBatis
  - JPA
