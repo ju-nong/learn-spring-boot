@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service    // 서비스임을 명시
-@Slf4j      // 로그 사용하기 위해 명시
+@Slf4j
 public class QuickService {
     @Autowired
     private QuickMapper quickMapper;
